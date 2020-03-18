@@ -1,5 +1,5 @@
 :root{
-    font-size: 16px;
+    font-size: 20px;
     --background-color:  #2f4f4f;
     --highlight-color: #3f6e6e;
     --lowlight-color: #1f3535;
@@ -14,16 +14,32 @@ body{
 }
 
 body::-webkit-scrollbar{
-    width: 0.5rem;
+    width: 2rem;
 }
 
 body::-webkit-scrollbar-track{
-    background-color: var(--lowlight-color);
+    background-color: #274444;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: inset 2px 1px 2px  var(--lowlight-color), 
+     inset -2px -1px 2px var(--highlight-color);
 }
 
 body::-webkit-scrollbar-thumb{
-    background-color: var(--text-color);
+    background-color: var(--background-color);
     border-radius: 30px;
+    box-shadow: inset 2px 1px 2px  var(--highlight-color), 
+     inset -2px -1px 2px var(--lowlight-color);
+    transition: box-shadow 5s ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: var(--background-color);
+    border-radius: 30px;
+    box-shadow: inset 4px 2px 4px  var(--highlight-color), 
+     inset -4px -2px 4px var(--lowlight-color);
+    transition: box-shadow 2s ease-in-out;
 }
 
 
@@ -159,8 +175,8 @@ div.column{
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 4px 2px 4px  var(--highlight-color), 
-    -4px -2px 4px var(--lowlight-color);
+    box-shadow: 4px 2px 2px  var(--highlight-color), 
+    -4px -2px 2px var(--lowlight-color);
     transition: box-shadow 0.2s ease-in-out, background-color 0.2s  ease-in-out;
 }
 
@@ -171,8 +187,8 @@ div.column{
     border-radius: 10px;
     box-shadow: 5px 2.5px 5px var(--lowlight-color), 
     -5px -2.5px 5px var(--highlight-color), 
-    inset 6px 4px 20px var(--highlight-color),
-    inset -6px -4px 20px #1e3333;
+    inset 6px 4px 15px var(--highlight-color),
+    inset -6px -4px 15px #1e3333;
     transition: box-shadow 0.2s ease-in-out;
 }
 
